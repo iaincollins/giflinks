@@ -4,6 +4,7 @@ var GifLinks = (function() {
   var body;
   var container;
   var audio;
+  var audioSupported
 
   /* -------------------------
   /*          UTILS
@@ -34,27 +35,25 @@ var GifLinks = (function() {
 
   // Initialize
   function init( elements, preload ) {
-
     if ( elements.length ) {
-
       // Loop and assign
       for( var i = 0; i < elements.length; i++ ) {
-
         if ( preload === true ) {
           preloadAndTrack( elements[ i ] );
         } else {
           track( elements[ i ] );
         }
       }
-
     } else {
-        
        if ( preload === true ) {
         preloadAndTrack( elements );
       } else {
         track( elements );
       }
     }
+    
+    var a = document.createElement('audio');    
+    audioSupported = !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
   }
 
   // Start tracking after preload
@@ -122,24 +121,21 @@ var GifLinks = (function() {
 
     container = document.createElement( 'div' );
     applyProperties( container, containerProperties );
-    container
     body.appendChild( container );
   }
 
   // Add the background to the container, and the container to the page!
   function startPartying( element ) {
     var awesomeGif = element.getAttribute( 'data-src' );
-    if( awesomeGif ) {
+    if (awesomeGif) {
       container.style[ 'backgroundImage' ] = 'url(' + awesomeGif + ')';
       container.style[ 'display' ] = 'block';
-    } else {
-      console.log( "Sorry, an element doesn't have a data-src!" );
     }
     
     if (audio)
       audio.pause();
     var awesomeAudio = element.getAttribute( 'data-audio' );
-    if (awesomeAudio) {
+    if (audioSupported && awesomeAudio) {
       audio = new Audio(awesomeAudio);
       audio.play();
     }
