@@ -1,6 +1,11 @@
-# GifLinks
+# GifLinks with Audio
 
-A simple javascript library used for adding full screen gif action as a hover effect. This is very serious stuff. [Here's a demo](http://tholman.com/giflinks)!
+A simple javascript library used for adding full screen gif action as a hover effect. This is very serious stuff.
+
+This is a fork of [Tim Holman](http://tholman.com)'s GifLinks.
+
+[Checkout a demo.](http://iaincollins.com/giflinks)!
+
 
 ### Instructions
 
