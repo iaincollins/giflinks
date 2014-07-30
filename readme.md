@@ -49,7 +49,7 @@ window.onload = function() {
 </script>
 ```
 
-You can also pass in an option to preload the image, In this case the giflinks will only become active when loading is complete!
+You can also pass in an option to preload the image, In this case the GifLinks will only become active when loading is complete!
 
 ```html
 <a href="awesome.html" data-src="./img/awesome.gif"> Check this out! </a>
@@ -63,21 +63,25 @@ window.onload = function() {
 </script>
 ```
 
-For the ultimate audio-visual experience you can also trigger play back of MP3s.
-
-By default they will loop while the GIF is visible, unless data-audio-loop is set to false.
+For the ultimate audio-visual experience you can also trigger play back of audio with the `data-audio` attribute.
 
 ```html
-<a href="awesome.html" data-src="./img/audio.gif" 
-   data-audio="./audio/audio.mp3" data-audio-loop="true"> Rock out! </a>
+<a href="awesome.html" data-src="./img/audio.gif" data-audio="./audio/audio.mp3"> Rock out! </a>
+```
+
+By default audio links will have an audio icon displayed next to them (which is a hint for the end user) and will loop while the GIF is visible. You can override the default behaviour by setting the `data-audio-icon` and `data-audio-loop` attributes to false.
+
+```html
+<a href="awesome.html" data-src="./img/audio.gif"  data-audio="./audio/audio.mp3"
+   data-audio-icon="false" data-audio-loop="false"> Rock out! </a>
 ```
 
 #### CSS
 There are a few little things to play with, when it comes to css.
 
-All active giflinks will have a `ready` and a `giflink` class. As well as a `has-link` and `no-link` class, if the element contains an active href.
+All active GifLinks will have a `ready` and a `giflink` class. As well as a `has-link` and `no-link` class, if the element contains an active href.
 
-Also, if you preload, the giflinks will recieve a `preloaded` class, which can be used to show the link is ready to be hovered, for example:
+Also, if you preload, the GifLinks will recieve a `preloaded` class, which can be used to show the link is ready to be hovered, for example:
 
 ```css
 .giflink.preloaded {
