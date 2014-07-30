@@ -63,10 +63,13 @@ window.onload = function() {
 </script>
 ```
 
-For the ultimate audio-visual experience you can also trigger play back of MP3s (by defualt they will loop while the GIF is visible, unless data-audio-loop is set to false):
+For the ultimate audio-visual experience you can also trigger play back of MP3s.
+
+By default they will loop while the GIF is visible, unless data-audio-loop is set to false.
 
 ```html
-<a href="awesome.html" data-src="./img/audio.gif" data-audio="./audio/audio.mp3" data-audio-loop="true"> Rock out! </a>
+<a href="awesome.html" data-src="./img/audio.gif" 
+   data-audio="./audio/audio.mp3" data-audio-loop="true"> Rock out! </a>
 ```
 
 #### CSS
