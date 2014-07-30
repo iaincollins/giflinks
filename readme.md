@@ -4,7 +4,7 @@ A simple javascript library used for adding full screen gif action as a hover ef
 
 This is a fork of [Tim Holman](http://tholman.com)'s GifLinks.
 
-[Checkout a demo.](http://iaincollins.com/giflinks)!
+[Checkout a demo.](http://iaincollins.com/giflinks)
 
 
 ### Instructions
