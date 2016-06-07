@@ -100,3 +100,5 @@ Also, if you preload, the GifLinks will recieve a `preloaded` class, which can b
 The MIT License (MIT)
 
 Copyright (C) 2014 ~ [Tim Holman](http://tholman.com) ~ timothy.w.holman@gmail.com
+
+Extended to include audio support by Iain Collins <me@iaincollins.com>
